@@ -1,7 +1,3 @@
-function redirectToPage(url) {
-    indow.location.href = url;
-}
-
 function copyToClipboard(id) {
     var copyText = document.getElementById(id);
     var text = copyText.innerText;
