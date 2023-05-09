@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dino - Python</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jaime Zepeda Pina">
+
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="project-styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Dino</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="../index.html">About</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html" class="right">Contact</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Project Description</h2>
+        </div>
+
+        <div class="section-title">
+            <h2>Technologies Used</h2>
+        </div>
+
+        <div class="libraries-container">
+            <div class="library" onclick="redirectToPage('https://www.pygame.org/news')"> 
+                <img src="../images/pygame.png">
+                <h3>Pygame</h3>
+            </div>
+            <div class="library" onclick="redirectToPage('https://neat-python.readthedocs.io/en/latest/')">
+                <img src="../images/neat.png">
+                <h3>NEAT</h3>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Project Overview</h2>
+        </div>
+
+        <div class="section-title">
+            <h2>Screenshots and Videos</h2>
+        </div>
+
+        <div class="video-container">
+            <video src="../videos/dino-train.mov" controls muted autoplay loop></video> <br>
+            <h4>AI model training (42 generations)</h4>
+        </div>
+
+        <div class="section-title">
+            <h2>Potential Improvements</h2>
+        </div>
+
+        <div class="section-title">
+            <h2>Key Takeaways</h2>
+        </div>
+
+        <script>
+            function redirectToPage(url) {
+                window.location.href = url;
+            }
+
+            const librariesContiainer = document.querySelector(".libraries-container");
+            const librarycount = librariesContiainer.querySelectorAll(".library").length;
+            librariesContiainer.style.columnCount = librarycount;
+            librariesContiainer.style.columnGap = '50px';
+        </script>
+    </body>
+</html>

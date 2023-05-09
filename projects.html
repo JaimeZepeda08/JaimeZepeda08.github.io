@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jaime Zepeda Pina">
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="projects.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Projects</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="index.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="right">Contact</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Python</h2> <br>
+            <img src="images/python.png">
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item" onclick="redirectToPage('projects/pychess.html')">
+                <img src="images/chess.png">
+                <div class="item-title"><h3>Chess</h3></div>
+            </div>
+            <div class="grid-item" onclick="redirectToPage('projects/pyspikes.html')">
+                <img src="images/spikes.png">
+                <div class="item-title"><h3>Spikes</h3></div>
+            </div>
+            <div class="grid-item" onclick="redirectToPage('projects/pydino.html')">
+                <img src="images/dino.png">
+                <div class="item-title"><h3>Dino</h3></div>
+            </div>
+            <div class="grid-item" onclick="redirectToPage('projects/pyflappy.html')">
+                <img src="images/flappy.png">
+                <div class="item-title"><h3>Flappy Bird</h3></div>
+            </div>
+            <div class="grid-item" onclick="redirectToPage('projects/pybubble.html')">
+                <img src="images/bubble.png">
+                <div class="item-title"><h3>Bubble Trouble</h3></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/minesweeper.png">
+                <div class="item-title"><h3>Mine Sweeper</h3></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/flow.png">
+                <div class="item-title"><h3>Flow</h3></div>
+            </div>
+            <div class="grid-item" onclick="redirectToPage('projects/py2048.html')">
+                <img src="images/2048.png">
+                <div class="item-title"><h3>2048</h3></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/snake.png">
+                <div class="item-title"><h3>Snake</h3></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/tetris.png">
+                <div class="item-title"><h3>Tetris</h3></div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Java</h2> <br>
+            <img src="images/java.png">
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/tasks.png">
+                <div class="item-title"><h3>To-Do List</h3></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/chess.png">
+                <div class="item-title"><h3>Chess</h3></div>
+            </div>
+            <div class="grid-item">
+                <img src="images/route.png">
+                <div class="item-title"><h3>Route Planner</h3></div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>R</h2> <br>
+            <img src="images/r.png">
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item" onclick="redirectToPage('projects/rrat.html')">
+                <img src="images/rat.png">
+                <div class="item-title"><h3>Rat Population</h3></div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>C++</h2> <br>
+            <img src="images/c++.png">
+        </div>
+
+        <div class="section-title">
+            <h2>C#</h2> <br>
+            <img src="images/c-sharp.png">
+        </div>
+
+        <script>
+            function redirectToPage(url) {
+                window.location.href = url;
+            }
+
+            const containers = document.querySelectorAll('.grid-container');
+            containers.forEach(container => {
+                const num_divs = container.querySelectorAll('.grid-item').length;
+                const col = 3;
+                const row = Math.ceil(num_divs / col);
+                container.style.gridTemplateColumns = 'repeat(' + col + ', 1fr)';
+                container.style.gridTemplateRows = 'repeat(' + row + ', 300px)';  
+            });
+        </script>
+    </body>
+</html>

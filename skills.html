@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skills</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jaime Zepeda Pina">
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="skills.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Skills</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="index.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="right">Contact</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Programming Languages</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <img src="images/java.png">
+                <h3>Java</h3>
+            </div>
+            <div class="skill">
+                <img src="images/python.png">
+                <h3>Python</h3>
+            </div>
+            <div class="skill">
+                <img src="images/c++.png">
+                <h3>C++</h3>
+            </div>
+            <div class="skill">
+                <img src="images/c-sharp.png">
+                <h3>C#</h3>
+            </div>
+            <div class="skill">
+                <img src="images/R.png">
+                <h3>R</h3>
+            </div>
+            <div class="skill">
+                <img src="images/html-5.png">
+                <h3>HTML</h3>
+            </div>
+            <div class="skill">
+                <img src="images/java-script.png">
+                <h3>Javascript</h3>
+            </div>
+            <div class="skill">
+                <img src="images/css-3.png">
+                <h3>CSS</h3>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <img src="images/git.png">
+                <h3>Git</h3>
+            </div>
+            <div class="skill">
+                <img src="images/linux.png">
+                <h3>Linux</h3>
+            </div>
+            <div class="skill">
+                <img src="images/server.png">
+                <h3>Web Servers</h3>
+            </div>
+            <div class="skill">
+                <img src="images/json.png">
+                <h3>JSON</h3>
+            </div>
+            <div class="skill">
+                <img src="images/junit5.png">
+                <h3>JUnit5 Testing</h3>
+            </div>
+            <div class="skill">
+                <img src="images/eclipse.png">
+                <h3>Eclipse</h3>
+            </div>
+            <div class="skill">
+                <img src="images/vscode.png">
+                <h3>VS Code</h3>
+            </div>
+        </div>
+
+        <div class="skills-container" id="extra-row">
+            <div class="skill">
+                <img src="images/unity.png">
+                <h3>Unity</h3>
+            </div>
+            <div class="skill">
+                <img src="images/blender.png">
+                <h3>Blender</h3>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Soft Skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <img src="images/collaboration.png">
+                <h3>Collaboration</h3>
+            </div>
+            <div class="skill">
+                <img src="images/fast-learner.png">
+                <h3>Fast Learner</h3>
+            </div>
+            <div class="skill">
+                <img src="images/detail.png">
+                <h3>Attention to Detail</h3>
+            </div>
+            <div class="skill">
+                <img src="images/communication.png">
+                <h3>Communication</h3>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Languages</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <img src="images/english.png">
+                <h3>English</h3>
+                <h4>Fluent</h4>
+            </div>
+            <div class="skill">
+                <img src="images/spanish.png">
+                <h3>Spanish</h3>
+                <h4>Fluent</h4>
+            </div>
+            <div class="skill">
+                <img src="images/china.png">
+                <h3>Chinese</h3>
+                <h4>Beginner</h4>
+            </div>
+        </div>
+
+        <script>
+            const containers = document.querySelectorAll('.skills-container');
+            containers.forEach(container => {
+                const num_divs = container.querySelectorAll('.skill').length;
+                const col = 5;
+                const row = Math.ceil(num_divs / col);
+                container.style.gridTemplateColumns = 'repeat(' + col + ', 1fr)';
+                container.style.gridTemplateRows = 'repeat(' + row + ', 300px)';  
+            });
+
+            const extraContainers = document.querySelectorAll('#extra-row');
+            extraContainers.forEach(container => {
+                const skills = container.querySelectorAll('.skill');
+                skills.forEach(skill => {
+                    skill.style.marginTop = '0px';
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+.row {  
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+}
+
+.side {
+    -ms-flex: 20%; 
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {   
+    -ms-flex: 70%; 
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #ddd;
+    overflow: scroll;
+}
+
+.footer img{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.footer h3{
+    margin: 0;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 700px) {
+.row {   
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 400px) {
+.navbar a {
+    float: none;
+    width: 100%;
+}
+}
+
+.education-container {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: #cecece;
+    border: 1px solid;
+    border-color: #c1c1c1;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.education-container h4 {
+    float: right;
+    padding-left: 10px;
+}
+
+.education-container img {
+    max-width: 50px;
+}
+
+.university-container {
+    width: fit-content;
+    text-align: center;
+}
+
+.university-container img{
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    padding-bottom: 20px;
+}
+
+#my-photo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spikes - Python</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jaime Zepeda Pina">
+
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="project-styles.css">
+        <link rel="stylesheet" href="../code.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Spikes</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="../index.html">About</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html" class="right">Contact</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Project Description</h2>
+        </div>
+
+        <div class="section-container">
+            <h3>Project Goals:</h3>
+            <ol>
+                <li>Code "Don't Touch The Spikes" in Python using Pygame</li>
+                <li>Implement an AI that learns how to play the game and progressively gets better</li>
+            </ol>
+        </div>
+
+        <div class="section-title">
+            <h2>Technologies Used</h2>
+        </div>
+
+        <div class="libraries-container">
+            <div class="library" onclick="redirectToPage('https://www.pygame.org/news')"> 
+                <img src="../images/pygame.png">
+                <h3>Pygame</h3>
+            </div>
+            <div class="library" onclick="redirectToPage('https://neat-python.readthedocs.io/en/latest/')">
+                <img src="../images/neat.png">
+                <h3>NEAT</h3>
+            </div>
+            <div class="library" onclick="redirectToPage('https://numpy.org/')">
+                <img src="../images/numpy.png">
+                <h3>Numpy</h3>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Project Overview</h2>
+        </div>
+
+        <div class="section-container">
+            <p>Files and classes used in this project:</p>
+            <h4 class="code">[main.py]</h4>
+            <ul> 
+                <li><span class="code">Bird</span>: This is the main class of the game, it represents a bird object used to train the AI model</li>
+                <li><span class="code">Collidable</span>: This class is extended by objects that the bird can collide with</li>
+                <li><span class="code">Spike</span>: This class extends Collidable and it represents a spike, if a bird collides with a spike it loses</li>
+                <li><span class="code">Spike_Manager</span>: This class manages the spawning of spikes</li>
+                <li><span class="code">Background</span>: This class handles elements in the background such as its color</li>
+                <li><span class="code">Counter</span>: This class keeps track of a bird's current score</li>
+            </ul>
+            <h4 class="code">[config.txt]</h4>
+            <br>
+            <div class="code-container">
+                <div class="code-chunk" id="config.txt">
+                    <img src="../images/copy.png" onclick="copyToClipboard('config.txt')">
+                    <p>[NEAT]</p> 
+                    <p>fitness_criterion &nbsp; &nbsp; = mean</p>
+                    <p>fitness_threshold &nbsp; &nbsp; = 750</p>
+                    <p>pop_size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 500</p>
+                    <p>reset_on_extinction &nbsp; = True</p>
+                    <br>
+                    <p>[DefaultGenome]</p>
+                    <p># node activation options</p>
+                    <p>activation_default &nbsp; &nbsp; &nbsp;= sigmoid</p>
+                    <p>activation_mutate_rate &nbsp;= 0</p>
+                    <p>activation_options &nbsp; &nbsp; &nbsp;= sigmoid</p>
+                    <br>
+                    <p># node aggregation options</p>
+                    <p>aggregation_default &nbsp; &nbsp; = sum</p>
+                    <p>aggregation_mutate_rate = 0.0</p>
+                    <p>aggregation_options &nbsp; &nbsp; = sum</p>
+                    <br>
+                    <p># node bias options</p>
+                    <p>bias_init_mean &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 0.0</p>
+                    <p>bias_init_stdev &nbsp; &nbsp; &nbsp; &nbsp; = 2</p>
+                    <p>bias_max_value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 30.0</p>
+                    <p>bias_min_value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= -30.0</p>
+                    <p>bias_mutate_power &nbsp; &nbsp; &nbsp; = 0.3</p>
+                    <p>bias_mutate_rate &nbsp; &nbsp; &nbsp; &nbsp;= 0.4</p>
+                    <p>bias_replace_rate &nbsp; &nbsp; &nbsp; = 0.1</p>
+                    <br>
+                    <p># genome compatibility options</p>
+                    <p>compatibility_disjoint_coefficient = 1.0</p>
+                    <p>compatibility_weight_coefficient &nbsp; = 0.5</p>
+                    <br>
+                    <p># connection add/remove rates</p>
+                    <p>conn_add_prob &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0.7</p>
+                    <p>conn_delete_prob &nbsp; &nbsp; &nbsp; &nbsp;= 0.4</p>
+                    <br>
+                    <p># connection enable options</p>
+                    <p>enabled_default &nbsp; &nbsp; &nbsp; &nbsp; = True</p>
+                    <p>enabled_mutate_rate &nbsp; &nbsp; = 0.02</p>
+                    <br>
+                    <p>feed_forward &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= True</p>
+                    <p>initial_connection &nbsp; &nbsp; &nbsp;= full_nodirect</p>
+                    <br>
+                    <p># node add/remove rates</p>
+                    <p>node_add_prob &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0.4</p>
+                    <p>node_delete_prob &nbsp; &nbsp; &nbsp; &nbsp;= 0.2</p>
+                    <br>
+                    <p># network parameters</p>
+                    <p>num_hidden &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 3</p>
+                    <p>num_inputs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 5</p>
+                    <p>num_outputs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 2</p>
+                    <br>
+                    <p># node response options</p>
+                    <p>response_init_mean &nbsp; &nbsp; &nbsp;= 1.0</p>
+                    <p>response_init_stdev &nbsp; &nbsp; = 0.0</p>
+                    <p>response_max_value &nbsp; &nbsp; &nbsp;= 30.0</p>
+                    <p>response_min_value &nbsp; &nbsp; &nbsp;= -30.0</p>
+                    <p>response_mutate_power &nbsp; = 0.0</p>
+                    <p>response_mutate_rate &nbsp; &nbsp;= 0.0</p>
+                    <p>response_replace_rate &nbsp; = 0.0</p>
+                    <br>
+                    <p># connection weight options</p>
+                    <p>weight_init_mean &nbsp; &nbsp; &nbsp; &nbsp;= 0.0</p>
+                    <p>weight_init_stdev &nbsp; &nbsp; &nbsp; = 2</p>
+                    <p>weight_max_value &nbsp; &nbsp; &nbsp; &nbsp;= 30</p>
+                    <p>weight_min_value &nbsp; &nbsp; &nbsp; &nbsp;= -30</p>
+                    <p>weight_mutate_power &nbsp; &nbsp; = 0.3</p>
+                    <p>weight_mutate_rate &nbsp; &nbsp; &nbsp;= 0.4</p>
+                    <p>weight_replace_rate &nbsp; &nbsp; = 0.1</p>
+                    <br>
+                    <p>[DefaultSpeciesSet]</p>
+                    <p>compatibility_threshold = 3.0</p>
+                    <br>
+                    <p>[DefaultStagnation]</p>
+                    <p>species_fitness_func = mean</p>
+                    <p>max_stagnation &nbsp; &nbsp; &nbsp; = 20</p>
+                    <p>species_elitism &nbsp; &nbsp; &nbsp;= 2</p>
+                    <br>
+                    <p>[DefaultReproduction]</p>
+                    <p>elitism &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 2</p>
+                    <p>survival_threshold = 0.1</p>
+                </div>
+                <h3>[config.txt]</h3> 
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Screenshots and Videos</h2>
+        </div>
+
+        <div class="video-container">
+            <video src="../videos/spikes-demo.mov" controls muted autoplay loop></video> <br>
+            <h4>Trained model playing the game</h4>
+        </div>
+
+        <div class="section-title">
+            <h2>Potential Improvements</h2>
+        </div>
+
+        <div class="section-container">
+            <ul>
+                <li>Simuluate more realistic physics</li>
+                <li>Alter some of the values in the configuration file and see how perfomance changes</li>
+            </ul>
+        </div>
+
+        <div class="section-title">
+            <h2>Analysis</h2>
+        </div>
+        
+        <img src="../images/copy.png" id="copy-overlay">
+
+        <script src="project-script.js"></script>
+
+    </body>
+</html>

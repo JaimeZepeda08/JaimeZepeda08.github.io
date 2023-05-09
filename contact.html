@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jaime Zepeda Pina">
+        
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Contact</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="index.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="right">Contact</a>
+        </div>
+
+        <div class="email-container">
+            <div class="tab"> 
+                <div class="circle" id="delete-button" style="background-color: #DD5144;" onclick="resetFields()"></div>
+                <div class="circle" style="background-color: #FFCD46;"></div>
+                <div class="circle" style="background-color: #1DA462;"></div>
+            </div>
+            <h3 id="mail">Mail</h3>
+            <h3 id="email">E-mail:</h3>
+            <div class="input email" contenteditable="true"></div>
+            <h3 id="subject">Subject:</h3>
+            <div class="input subject" contenteditable="true"></div>
+            <h3 id="message">Message:</h3>
+            <div class="input message" contenteditable="true"></div>
+            <div class="submit-button" onclick="submit()">Submit</div>
+        </div>
+
+        <div class="footer">
+            <img src="images/gmail.png">
+            <h3>jzepedapina@gmail.com</h3>
+            <div style="width: 50px"></div>
+            <img src="images/phone.png">
+            <h3>(510) 984-8580</h3>
+            <div style="width: 75px"></div>
+            <img src="images/instagram.png">
+            <h3>jaimezepeda08</h3>
+        </div>
+        
+        <script src="email.js"></script>
+
+    </body>
+</html>
