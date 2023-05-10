@@ -2,6 +2,22 @@ body {
     background-color: #c9ccce;
 }
 
+#title {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;;
+    width: fit-content;
+    text-align: center; 
+    color: white;
+    background-color: #9f9f9f; 
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: #444444;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 #editor-section {
     position: absolute;
     left: 2%;
