@@ -18,9 +18,8 @@
     background-color: #e4e4e0;
     border: solid 3px;
     border-color: #d4d4d4;
-    overflow: hidden;
+    overflow: scroll;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-
 }
 
 .code-chunk img {

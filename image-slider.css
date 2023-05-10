@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    height: 400px;
-  }
+    height: fit-content;
+    margin-top: 22%;
+}
 
 .image-slider img {
-    max-width: 60%;
+    width: 60%;
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;

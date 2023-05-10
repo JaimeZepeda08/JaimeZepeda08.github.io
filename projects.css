@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: fit-content;
     height: 90%;
     border-radius: 20px;
     background-color: #d6d6d6;
@@ -45,9 +45,9 @@
   
   @keyframes shake-rotate {
     0% { transform: rotate(0deg); }
-    25% { transform: rotate(2deg); }
+    25% { transform: rotate(1deg); }
     50% { transform: rotate(0deg); }
-    75% { transform: rotate(-2deg); }
+    75% { transform: rotate(-1deg); }
     100% { transform: rotate(0deg); }
   }
 
