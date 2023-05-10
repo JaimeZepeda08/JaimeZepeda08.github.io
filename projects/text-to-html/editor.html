@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text To HTML</title>
+        <meta name="author" content="Jaime Zepeda Pina">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="editor-section">
+            <h1 class="section-title">Text Editor</h1>
+            <div id="option-bar">
+                <img src="icons/copy.png" onclick="copyToClipboard('html-container')">
+                <img src="icons/delete.png" onclick="deleteContent()">
+                <img src="icons/tab.png" onclick="tab()">
+                <img src="icons/bold.png" id="bold" onclick="select(this)">
+                <img src="icons/italic.png" id="italic" onclick="select(this)">
+                <img src="icons/underlined.png" id="underlined" onclick="select(this)">
+                <div id="font-container">
+                    <img src="icons/font.png" onclick="showDropdown('font-dropdown')">
+                    <div id="font-dropdown">
+                        <div class="font-option" onclick="setFont('Time New Roman')">Time New Roman</div>
+                        <div class="font-option" onclick="setFont('Arial')">Arial</div>
+                        <div class="font-option" onclick="setFont('Helvetica')">Helvetica</div>
+                        <div class="font-option" onclick="setFont('Sans-serif')">Sans-serif</div>
+                        <div class="font-option" onclick="setFont('Monospace')">Monospace</div>
+                        <div class="font-option" onclick="setFont('Verdana')">Verdana</div>
+                        <div class="font-option" onclick="setFont('Calibri')">Calibri</div>
+                    </div>
+                </div>
+                <div id="color-container">
+                    <img src="icons/color.png" onclick="showDropdown('color-dropdown')" style="border: 3px solid">
+                    <div id="color-dropdown">
+                        <div class="color-option" onclick="setColor('black')" style="background-color: black;"></div>
+                        <div class="color-option" onclick="setColor('white')" style="background-color: white;"></div>
+                        <div class="color-option" onclick="setColor('red')" style="background-color: red;"></div>
+                        <div class="color-option" onclick="setColor('blue')" style="background-color: blue;"></div>
+                        <div class="color-option" onclick="setColor('green')" style="background-color: green;"></div>
+                        <div class="color-option" onclick="setColor('yellow')" style="background-color: yellow;"></div>
+                        <div class="color-option" onclick="setColor('brown')" style="background-color: brown;"></div>
+                        <div class="color-option" onclick="setColor('purple')" style="background-color: purple;"></div>
+                        <div class="color-option" onclick="setColor('orange')" style="background-color: orangered;"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="text-container" contenteditable="true"></div>
+        </div>
+        <div id="html-section">
+            <h1 class="section-title">HTML</h1> 
+            <div id="html-container"></div>
+        </div>
+
+        <script src="text-to-html.js"></script>
+        <script>
+            update();
+        </script>
+    </body>
+</html>
