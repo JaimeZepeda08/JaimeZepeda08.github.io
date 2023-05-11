@@ -1,6 +1,7 @@
 .section-title {
     padding: 10px;
     background-color: #f3f3f3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .section-title h2 {
@@ -20,6 +21,7 @@
     display: grid;
     justify-items: center; 
     align-items: center; 
+    overflow: scroll;
 }
 
 .grid-item {
@@ -28,33 +30,26 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
-    height: 90%;
+    height: fit-content;
     border-radius: 20px;
     background-color: #d6d6d6;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transition: box-shadow 0.3 ease;
 }
 
 .grid-item:hover {
-    filter: brightness(0.8)
+    filter: brightness(0.95);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
-
-.grid-item:hover {
-    animation: shake-rotate 0.3s ease-in-out;
-}
-  
-  @keyframes shake-rotate {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(1deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-1deg); }
-    100% { transform: rotate(0deg); }
-  }
 
 .grid-item img {
-    padding-bottom: 15%;
-    max-width: 80%;
-    max-height: 80%;
+    padding: 20px;
+    padding-bottom: 60px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 .item-title {
@@ -63,7 +58,8 @@
     bottom: 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: #c0c0c0;
+    background-color: #bcbcbc;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .item-title h3 {

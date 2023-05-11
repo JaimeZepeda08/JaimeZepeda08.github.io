@@ -2,6 +2,7 @@
     text-align: center;
     padding: 10px; 
     background-color: #f3f3f3f3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .section-title h2 {
@@ -47,7 +48,9 @@
     padding: 15px;
     background-color: #d6d6d6;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transition: box-shadow 0.3 ease;
 }
 
 .library img {
@@ -59,15 +62,8 @@
 }
 
 .library:hover {
-    filter: brightness(0.8);
-    animation: shake-rotate 0.3s ease-in-out;
-}
-
-@keyframes shake-rotate {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(1deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-1deg); }
-    100% { transform: rotate(0deg); }
+    filter: brightness(0.95);
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
