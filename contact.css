@@ -12,6 +12,7 @@
     border-color: #cecece;
     background-color: #e7e7e7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto Slab';
 }
 
 .tab {
@@ -22,14 +23,6 @@
     width: 100%;
     border-radius: 10px 10px 0 0;
     background-color: #cecece;
-}
-
-#mail {
-    width: fit-content;
-    position: relative;
-    padding-top: 5px;
-    left: 45%; 
-    margin: 0;
 }
 
 .circle {
@@ -130,24 +123,4 @@
 
 .submit-button:hover {
     filter: brightness(0.8);
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: #ddd;
-    overflow: scroll;
-}
-
-.footer img{
-    max-width: 40px;
-    max-height: 40px;
-}
-
-.footer h3{
-    margin: 0;
-    margin-left: 15px;
 }
