@@ -89,8 +89,21 @@ function tab() {
 }
 
 function formatText(text) {
-    text = text.replaceAll("</div>", "</div>\n");
-    text = text.replace("<div>", "<div>\n");
+    text = text.replaceAll("<div>", "<p>");
+    text = text.replaceAll("</div>", "</p>");
+    text = text.replaceAll("</p>", "</p>\n");
+    text = text.replace("</font>", "</font></p>\n");
+    text = text.replaceAll("style=\"\"", "");
+    text = text.slice(0, -5);
+
+    lines = text.split("\n");
+    lines.forEach((line, index) => {
+        if (/<p>.*<br>.*<\/p>/.test(line)){
+            lines[index] = "<p><br></p>"
+        }
+    });
+    text = lines.join("\n");
+
     return text;
 }
 
