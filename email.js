@@ -22,12 +22,12 @@ function animateSend() {
     var intervalId = setInterval(frame, 5);
   
     function frame() {
-      if (currentPosition >= 150) {
+      if (currentPosition >= 200) {
         clearInterval(intervalId);
-        fadeBackIn(send);
         resetFields();
+        fadeBackIn(send);
       } else {
-        currentPosition += 3;
+        currentPosition += 2;
         send.style.left = currentPosition + "2px";
       }
     }
@@ -36,13 +36,13 @@ function animateSend() {
       element.style.display = "block";
       element.style.opacity = 0;
       var opacity = 0;
+      element.style.left = "0px";
       var intervalId = setInterval(frame, 5);
   
       function frame() {
         if (opacity >= 1) {
           clearInterval(intervalId);
           element.style.opacity = 1;
-          element.style.left = "0px";
         } else {
           opacity += 0.01;
           element.style.opacity = opacity;

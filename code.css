@@ -13,7 +13,7 @@
     padding: 15px;
     display: block;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 50%;
     height: fit-content;
     background-color: #e4e4e0;
     border: solid 2px;
@@ -28,7 +28,8 @@
     cursor: pointer;
     padding: 5px;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: scale 0.5s ease;
+    transition: background-color 0.5s ease;
     transition: box-shadow 0.1s ease;
 }
 
@@ -37,25 +38,17 @@
 }
 
 .copy:hover {
-    transform: scale(1.2);
-    background-color: #c2c2c2;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    background-color: #d2d2d2;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
-
-.copy-overlay {
-    width: 25%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    display: none;
-}
 
 .code {
     padding-left: 2px;
     padding-right: 2px;
     margin: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 3px;
     width: fit-content;
     background-color: #ebebeb;

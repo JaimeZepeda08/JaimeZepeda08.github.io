@@ -33,9 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   
-    // show the first image
-    showImage(0);
-  
     // add event listeners to the arrow buttons
     const arrowLeft = document.querySelector(".arrow-left");
     const arrowRight = document.querySelector(".arrow-right");

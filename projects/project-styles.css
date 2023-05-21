@@ -13,6 +13,10 @@
     padding: 20px; 
 }
 
+a {
+    text-decoration: none;
+}
+
 .video-container{
     text-align: center;
     padding: 30px;
@@ -45,10 +49,12 @@
     width: fit-content;
     height: 90%;
     border-radius: 15px;
+    border: 0.5px solid; 
+    border-color: #5a5a5a;
     padding: 15px;
     background-color: #d6d6d6;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     transition: box-shadow 0.3 ease;
 }

@@ -34,9 +34,11 @@
     border-radius: 20px;
     background-color: #d6d6d6;
     cursor: pointer;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     transition: box-shadow 0.3 ease;
+    border: 0.5px solid; 
+    border-color: #5a5a5a;
 }
 
 .grid-item:hover {
@@ -46,10 +48,11 @@
 }
 
 .grid-item img {
-    padding: 20px;
-    padding-bottom: 60px;
-    max-width: 250px;
-    max-height: 250px;
+    border-radius: 15%;
+    margin: 20px;
+    margin-bottom: 60px;
+    max-width: 180px;
+    max-height: 180px;
 }
 
 .item-title {
@@ -59,7 +62,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #bcbcbc;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .item-title h3 {

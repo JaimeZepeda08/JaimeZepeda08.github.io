@@ -60,6 +60,16 @@
         </div>
 
         <div class="section-container">
+            <h3>Game Description</h3>
+            <p>In this project I recreated a game called <span style="font-family: 'Courier New', Courier, monospace;"><i><a href="#">Don't Touch The Spikes</a></i></span> I found on the App Store. 
+                The goal of the game is to get as many points as you can by jumping and avoiding the spikes that appear randomly on the wall.</p>
+            <p>Some features of this game that I decided to implement include: </p>
+            <ul>
+                <li>Increasing number of spikes appearing as the score count increases</li>
+                <li>Fading of background color to a new one every 5 points</li>
+            </ul>
+            <h3>File Overview</h3>
+            <p>To start this project I first had to recreate the game in Python using the library Pygame.</p>
             <p>Files and classes used in this project:</p>
             <h4 class="code">[main.py]</h4>
             <ul> 
@@ -71,7 +81,26 @@
                 <li><span class="code">Counter</span>: This class keeps track of a bird's current score</li>
             </ul>
             <h4 class="code">[config.txt]</h4>
-            <br>
+            <h4 class="code">[AI.pkl]</h4>
+            <h3>Bird</h3>
+            <p>The <span class="code">Bird</span> class acts as the object that the player controls. It controls the physics by implementing gravity and movement. It also controls the animation of the bird and its trail</p>
+            <div class="code-container">
+                <div class="code-chunk" id="bird-movement">
+                    <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('bird-movement')"></div>
+                </div>
+                <h3>[main.py]:Bird</h3>
+            </div>
+            <p>This code shows the part of the <span class="code">Bird</span> class that controls the animation.</p>
+            <div class="code-container">
+                <div class="code-chunk" id="bird-animation">
+                    <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('bird-animation')"></div>
+                </div>
+                <h3>[main.py]:Bird</h3>
+            </div>
+            <h3>Spikes</h3>
+            <h3>Additional Features</h3>
+            <h3>AI</h3>
+            <p>The following piece of code shows the parameters used to set up the neural network</p>
             <div class="code-container">
                 <div class="code-chunk" id="config.txt">
                     <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('config.txt')"></div>
