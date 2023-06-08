@@ -11,6 +11,8 @@
 
 .section-container {
     padding: 20px; 
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 a {
@@ -41,7 +43,7 @@ a {
     margin: 0 auto;
     width: fit-content;
     padding: 20px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .library {

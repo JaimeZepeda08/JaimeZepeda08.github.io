@@ -18,19 +18,17 @@
 }
 
 .grid-container {
-    display: grid;
-    justify-items: center; 
-    align-items: center; 
-    overflow: scroll;
+    text-align: center;
 }
 
 .grid-item {
     position: relative;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     width: fit-content;
     height: fit-content;
+    margin: 25px;
     border-radius: 20px;
     background-color: #d6d6d6;
     cursor: pointer;

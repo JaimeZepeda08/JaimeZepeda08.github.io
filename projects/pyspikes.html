@@ -29,7 +29,7 @@
         </div>
 
         <div class="section-container">
-            <h3>Project Goals:</h3>
+            <h3>Project Goals</h3>
             <ol>
                 <li>Code "Don't Touch The Spikes" in Python using Pygame</li>
                 <li>Implement an AI that learns how to play the game and progressively gets better</li>
@@ -61,130 +61,139 @@
 
         <div class="section-container">
             <h3>Game Description</h3>
-            <p>In this project I recreated a game called <span style="font-family: 'Courier New', Courier, monospace;"><i><a href="#">Don't Touch The Spikes</a></i></span> I found on the App Store. 
-                The goal of the game is to get as many points as you can by jumping and avoiding the spikes that appear randomly on the wall.</p>
-            <p>Some features of this game that I decided to implement include: </p>
-            <ul>
-                <li>Increasing number of spikes appearing as the score count increases</li>
-                <li>Fading of background color to a new one every 5 points</li>
-            </ul>
+            <div class="tab">
+                <p>In this project I recreated a game called <i><a href="https://apps.apple.com/pl/app/dont-touch-the-spikes/id895942435">Don't Touch The Spikes</a></i> I found on the App Store. 
+                    The goal of the game is to get as many points as you can by jumping and avoiding the spikes that appear randomly on the wall.</p>
+            </div>
+            <hr class="section-divider">
             <h3>File Overview</h3>
-            <p>To start this project I first had to recreate the game in Python using the library Pygame.</p>
-            <p>Files and classes used in this project:</p>
-            <h4 class="code">[main.py]</h4>
-            <ul> 
-                <li><span class="code">Bird</span>: This is the main class of the game, it represents a bird object used to train the AI model</li>
-                <li><span class="code">Collidable</span>: This class is extended by objects that the bird can collide with</li>
-                <li><span class="code">Spike</span>: This class extends Collidable and it represents a spike, if a bird collides with a spike it loses</li>
-                <li><span class="code">Spike_Manager</span>: This class manages the spawning of spikes</li>
-                <li><span class="code">Background</span>: This class handles elements in the background such as its color</li>
-                <li><span class="code">Counter</span>: This class keeps track of a bird's current score</li>
-            </ul>
-            <h4 class="code">[config.txt]</h4>
-            <h4 class="code">[AI.pkl]</h4>
+            <div class="tab">
+                <p>Files and classes used in this project:</p>
+                <h4 class="code">[main.py]</h4>
+                <ul> 
+                    <li><span class="code">Bird</span>: This is the main class of the game, it represents a bird object used to train the AI model</li>
+                    <li><span class="code">Collidable</span>: This class is extended by objects that the bird can collide with</li>
+                    <li><span class="code">Spike</span>: This class extends Collidable and it represents a spike, if a bird collides with a spike it loses</li>
+                    <li><span class="code">Spike_Manager</span>: This class manages the spawning of spikes</li>
+                    <li><span class="code">Background</span>: This class handles elements in the background such as its color</li>
+                    <li><span class="code">Counter</span>: This class keeps track of a bird's current score</li>
+                </ul>
+                <h4 class="code">[config.txt]</h4>
+                <h4 class="code">[AI.pkl]</h4>
+            </div>
+            <hr class="section-divider">
             <h3>Bird</h3>
-            <p>The <span class="code">Bird</span> class acts as the object that the player controls. It controls the physics by implementing gravity and movement. It also controls the animation of the bird and its trail</p>
-            <div class="code-container">
-                <div class="code-chunk" id="bird-movement">
-                    <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('bird-movement')"></div>
+            <div class="tab">
+                <p>The <span class="code">Bird</span> class acts as the object that the player controls. It controls the physics by implementing gravity and movement, it also controls the animation of the bird and its trail</p>
+                <p>The following piece of code shows the implementation of the bird's physics</p>
+                <div class="code-container">
+                    <div class="code-chunk" id="bird-movement">
+                        <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('bird-movement')"></div>
+                    </div>
+                    <h3>[main.py]:Bird</h3>
                 </div>
-                <h3>[main.py]:Bird</h3>
-            </div>
-            <p>This code shows the part of the <span class="code">Bird</span> class that controls the animation.</p>
-            <div class="code-container">
-                <div class="code-chunk" id="bird-animation">
-                    <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('bird-animation')"></div>
+                <p>The following piece of code shows the part of the <span class="code">Bird</span> class that controls the animation.</p>
+                <div class="code-container">
+                    <div class="code-chunk" id="bird-animation">
+                        <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('bird-animation')"></div>
+                    </div>
+                    <h3>[main.py]:Bird</h3>
                 </div>
-                <h3>[main.py]:Bird</h3>
             </div>
+            <hr class="section-divider">
             <h3>Spikes</h3>
+            <hr class="section-divider">
             <h3>Additional Features</h3>
+            <hr class="section-divider">
             <h3>AI</h3>
-            <p>The following piece of code shows the parameters used to set up the neural network</p>
-            <div class="code-container">
-                <div class="code-chunk" id="config.txt">
-                    <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('config.txt')"></div>
-                    <p>[NEAT]</p> 
-                    <p>fitness_criterion &nbsp; &nbsp; = mean</p>
-                    <p>fitness_threshold &nbsp; &nbsp; = 750</p>
-                    <p>pop_size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 500</p>
-                    <p>reset_on_extinction &nbsp; = True</p>
-                    <br>
-                    <p>[DefaultGenome]</p>
-                    <p># node activation options</p>
-                    <p>activation_default &nbsp; &nbsp; &nbsp;= sigmoid</p>
-                    <p>activation_mutate_rate &nbsp;= 0</p>
-                    <p>activation_options &nbsp; &nbsp; &nbsp;= sigmoid</p>
-                    <br>
-                    <p># node aggregation options</p>
-                    <p>aggregation_default &nbsp; &nbsp; = sum</p>
-                    <p>aggregation_mutate_rate = 0.0</p>
-                    <p>aggregation_options &nbsp; &nbsp; = sum</p>
-                    <br>
-                    <p># node bias options</p>
-                    <p>bias_init_mean &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 0.0</p>
-                    <p>bias_init_stdev &nbsp; &nbsp; &nbsp; &nbsp; = 2</p>
-                    <p>bias_max_value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 30.0</p>
-                    <p>bias_min_value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= -30.0</p>
-                    <p>bias_mutate_power &nbsp; &nbsp; &nbsp; = 0.3</p>
-                    <p>bias_mutate_rate &nbsp; &nbsp; &nbsp; &nbsp;= 0.4</p>
-                    <p>bias_replace_rate &nbsp; &nbsp; &nbsp; = 0.1</p>
-                    <br>
-                    <p># genome compatibility options</p>
-                    <p>compatibility_disjoint_coefficient = 1.0</p>
-                    <p>compatibility_weight_coefficient &nbsp; = 0.5</p>
-                    <br>
-                    <p># connection add/remove rates</p>
-                    <p>conn_add_prob &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0.7</p>
-                    <p>conn_delete_prob &nbsp; &nbsp; &nbsp; &nbsp;= 0.4</p>
-                    <br>
-                    <p># connection enable options</p>
-                    <p>enabled_default &nbsp; &nbsp; &nbsp; &nbsp; = True</p>
-                    <p>enabled_mutate_rate &nbsp; &nbsp; = 0.02</p>
-                    <br>
-                    <p>feed_forward &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= True</p>
-                    <p>initial_connection &nbsp; &nbsp; &nbsp;= full_nodirect</p>
-                    <br>
-                    <p># node add/remove rates</p>
-                    <p>node_add_prob &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0.4</p>
-                    <p>node_delete_prob &nbsp; &nbsp; &nbsp; &nbsp;= 0.2</p>
-                    <br>
-                    <p># network parameters</p>
-                    <p>num_hidden &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 3</p>
-                    <p>num_inputs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 5</p>
-                    <p>num_outputs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 2</p>
-                    <br>
-                    <p># node response options</p>
-                    <p>response_init_mean &nbsp; &nbsp; &nbsp;= 1.0</p>
-                    <p>response_init_stdev &nbsp; &nbsp; = 0.0</p>
-                    <p>response_max_value &nbsp; &nbsp; &nbsp;= 30.0</p>
-                    <p>response_min_value &nbsp; &nbsp; &nbsp;= -30.0</p>
-                    <p>response_mutate_power &nbsp; = 0.0</p>
-                    <p>response_mutate_rate &nbsp; &nbsp;= 0.0</p>
-                    <p>response_replace_rate &nbsp; = 0.0</p>
-                    <br>
-                    <p># connection weight options</p>
-                    <p>weight_init_mean &nbsp; &nbsp; &nbsp; &nbsp;= 0.0</p>
-                    <p>weight_init_stdev &nbsp; &nbsp; &nbsp; = 2</p>
-                    <p>weight_max_value &nbsp; &nbsp; &nbsp; &nbsp;= 30</p>
-                    <p>weight_min_value &nbsp; &nbsp; &nbsp; &nbsp;= -30</p>
-                    <p>weight_mutate_power &nbsp; &nbsp; = 0.3</p>
-                    <p>weight_mutate_rate &nbsp; &nbsp; &nbsp;= 0.4</p>
-                    <p>weight_replace_rate &nbsp; &nbsp; = 0.1</p>
-                    <br>
-                    <p>[DefaultSpeciesSet]</p>
-                    <p>compatibility_threshold = 3.0</p>
-                    <br>
-                    <p>[DefaultStagnation]</p>
-                    <p>species_fitness_func = mean</p>
-                    <p>max_stagnation &nbsp; &nbsp; &nbsp; = 20</p>
-                    <p>species_elitism &nbsp; &nbsp; &nbsp;= 2</p>
-                    <br>
-                    <p>[DefaultReproduction]</p>
-                    <p>elitism &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 2</p>
-                    <p>survival_threshold = 0.1</p>
+            <div class="tab">
+                <p>The algorithm used in this project is called <a href="../algorithms/neat.html">NEAT</a> (Neuroevolution of Augmenting Topologies)</p>
+                <p>The following piece of code shows the parameters used to set up the neural network</p>
+                <div class="code-container">
+                    <div class="code-chunk" id="config.txt">
+                        <div class="copy"><img src="../images/copy.png" onclick="copyToClipboard('config.txt')"></div>
+                        <p>[NEAT]</p> 
+                        <p>fitness_criterion &nbsp; &nbsp; = mean</p>
+                        <p>fitness_threshold &nbsp; &nbsp; = 750</p>
+                        <p>pop_size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 500</p>
+                        <p>reset_on_extinction &nbsp; = True</p>
+                        <br>
+                        <p>[DefaultGenome]</p>
+                        <p># node activation options</p>
+                        <p>activation_default &nbsp; &nbsp; &nbsp;= sigmoid</p>
+                        <p>activation_mutate_rate &nbsp;= 0</p>
+                        <p>activation_options &nbsp; &nbsp; &nbsp;= sigmoid</p>
+                        <br>
+                        <p># node aggregation options</p>
+                        <p>aggregation_default &nbsp; &nbsp; = sum</p>
+                        <p>aggregation_mutate_rate = 0.0</p>
+                        <p>aggregation_options &nbsp; &nbsp; = sum</p>
+                        <br>
+                        <p># node bias options</p>
+                        <p>bias_init_mean &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 0.0</p>
+                        <p>bias_init_stdev &nbsp; &nbsp; &nbsp; &nbsp; = 2</p>
+                        <p>bias_max_value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 30.0</p>
+                        <p>bias_min_value &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= -30.0</p>
+                        <p>bias_mutate_power &nbsp; &nbsp; &nbsp; = 0.3</p>
+                        <p>bias_mutate_rate &nbsp; &nbsp; &nbsp; &nbsp;= 0.4</p>
+                        <p>bias_replace_rate &nbsp; &nbsp; &nbsp; = 0.1</p>
+                        <br>
+                        <p># genome compatibility options</p>
+                        <p>compatibility_disjoint_coefficient = 1.0</p>
+                        <p>compatibility_weight_coefficient &nbsp; = 0.5</p>
+                        <br>
+                        <p># connection add/remove rates</p>
+                        <p>conn_add_prob &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0.7</p>
+                        <p>conn_delete_prob &nbsp; &nbsp; &nbsp; &nbsp;= 0.4</p>
+                        <br>
+                        <p># connection enable options</p>
+                        <p>enabled_default &nbsp; &nbsp; &nbsp; &nbsp; = True</p>
+                        <p>enabled_mutate_rate &nbsp; &nbsp; = 0.02</p>
+                        <br>
+                        <p>feed_forward &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= True</p>
+                        <p>initial_connection &nbsp; &nbsp; &nbsp;= full_nodirect</p>
+                        <br>
+                        <p># node add/remove rates</p>
+                        <p>node_add_prob &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0.4</p>
+                        <p>node_delete_prob &nbsp; &nbsp; &nbsp; &nbsp;= 0.2</p>
+                        <br>
+                        <p># network parameters</p>
+                        <p>num_hidden &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 3</p>
+                        <p>num_inputs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 5</p>
+                        <p>num_outputs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 2</p>
+                        <br>
+                        <p># node response options</p>
+                        <p>response_init_mean &nbsp; &nbsp; &nbsp;= 1.0</p>
+                        <p>response_init_stdev &nbsp; &nbsp; = 0.0</p>
+                        <p>response_max_value &nbsp; &nbsp; &nbsp;= 30.0</p>
+                        <p>response_min_value &nbsp; &nbsp; &nbsp;= -30.0</p>
+                        <p>response_mutate_power &nbsp; = 0.0</p>
+                        <p>response_mutate_rate &nbsp; &nbsp;= 0.0</p>
+                        <p>response_replace_rate &nbsp; = 0.0</p>
+                        <br>
+                        <p># connection weight options</p>
+                        <p>weight_init_mean &nbsp; &nbsp; &nbsp; &nbsp;= 0.0</p>
+                        <p>weight_init_stdev &nbsp; &nbsp; &nbsp; = 2</p>
+                        <p>weight_max_value &nbsp; &nbsp; &nbsp; &nbsp;= 30</p>
+                        <p>weight_min_value &nbsp; &nbsp; &nbsp; &nbsp;= -30</p>
+                        <p>weight_mutate_power &nbsp; &nbsp; = 0.3</p>
+                        <p>weight_mutate_rate &nbsp; &nbsp; &nbsp;= 0.4</p>
+                        <p>weight_replace_rate &nbsp; &nbsp; = 0.1</p>
+                        <br>
+                        <p>[DefaultSpeciesSet]</p>
+                        <p>compatibility_threshold = 3.0</p>
+                        <br>
+                        <p>[DefaultStagnation]</p>
+                        <p>species_fitness_func = mean</p>
+                        <p>max_stagnation &nbsp; &nbsp; &nbsp; = 20</p>
+                        <p>species_elitism &nbsp; &nbsp; &nbsp;= 2</p>
+                        <br>
+                        <p>[DefaultReproduction]</p>
+                        <p>elitism &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 2</p>
+                        <p>survival_threshold = 0.1</p>
+                    </div>
+                    <h3>[config.txt]</h3> 
                 </div>
-                <h3>[config.txt]</h3> 
             </div>
         </div>
 

@@ -98,9 +98,6 @@
                 <img src="images/vscode.png">
                 <h3>VS Code</h3>
             </div>
-        </div>
-
-        <div class="skills-container" id="extra-row">
             <div class="skill">
                 <img src="images/unity.png">
                 <h3>Unity</h3>
@@ -155,24 +152,5 @@
                 <h4>Beginner</h4>
             </div>
         </div>
-
-        <script>
-            const containers = document.querySelectorAll('.skills-container');
-            containers.forEach(container => {
-                const num_divs = container.querySelectorAll('.skill').length;
-                const col = 5;
-                const row = Math.ceil(num_divs / col);
-                container.style.gridTemplateColumns = 'repeat(' + col + ', 1fr)';
-                container.style.gridTemplateRows = 'repeat(' + row + ', 300px)';  
-            });
-
-            const extraContainers = document.querySelectorAll('#extra-row');
-            extraContainers.forEach(container => {
-                const skills = container.querySelectorAll('.skill');
-                skills.forEach(skill => {
-                    skill.style.marginTop = '0px';
-                })
-            })
-        </script>
     </body>
 </html>

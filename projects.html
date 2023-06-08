@@ -128,15 +128,6 @@
             function redirectToPage(url) {
                 window.location.href = url;
             }
-
-            const containers = document.querySelectorAll('.grid-container');
-            containers.forEach(container => {
-                const num_divs = container.querySelectorAll('.grid-item').length;
-                const col = 4;
-                const row = Math.ceil(num_divs / col);
-                container.style.gridTemplateColumns = 'repeat(' + col + ', 1fr)';
-                container.style.gridTemplateRows = 'repeat(' + row + ', 300px)';  
-            });
         </script>
     </body>
 </html>

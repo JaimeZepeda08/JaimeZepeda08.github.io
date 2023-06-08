@@ -11,16 +11,12 @@
 }
 
 .skills-container {
-    display: flex;
-    flex-direction: row;
-    overflow: scroll;
+    text-align: center;
 }
 
 .skill {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: inline-block;
+    margin: 20px;
     width: fit-content;
     text-align: center;
     padding: 10px;

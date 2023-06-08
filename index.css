@@ -6,17 +6,18 @@
 }
 
 .side {
-    -ms-flex: 20%; 
-    flex: 20%;
-    background-color: #f1f1f1;
+    -ms-flex: 15%; 
+    flex: 15%;
+    background-color: #ebebeb;
     padding: 20px;
+    text-align: center;
 }
 
 .main {   
     -ms-flex: 70%; 
     flex: 70%;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
 }
 
 @media screen and (max-width: 700px) {
@@ -40,17 +41,20 @@
     padding: 5px;
     width: fit-content;
     border-radius: 10px;
-    background-color: #cecece;
-    border: 0.5px solid;
-    border-color: #656565;
+    background-color: #c1a00cb7;
+    border: 4px solid;
+    border-color: #a30f0fb4;
     overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-family: 'Roboto Slab';
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
+
 }
 
 .education-container h4 {
     float: right;
     padding-left: 10px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .education-container img {
@@ -76,4 +80,60 @@
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section h2 {
+    text-align: center;
+}
+
+.sub-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    margin: 30px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.xc-event {
+    display: inline-block;
+    margin: 20px;
+    width: 175px;
+    height: fit-content;
+    border-radius: 15px;
+    background-color: rgb(214,99,82);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.xc-event h4 {
+    margin: 10px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.xc-event h2 {
+    margin: 10px;
+    font-family: Monaco;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.marathon-img {
+    display: inline-block;
+    margin: 20px;
+    max-height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
