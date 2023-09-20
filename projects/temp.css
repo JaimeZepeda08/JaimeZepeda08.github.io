@@ -1,0 +1,11 @@
+#work-in-progress {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 40%;
+}
+
+#work-in-progress img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px;
+}
