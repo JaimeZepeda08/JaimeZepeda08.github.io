@@ -27,6 +27,36 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.skill.flip {
+    transition: filter 0.2s, background-color 0.2s, transform 1s; 
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.skill.flip::before {
+    content: attr(experience);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6d6d6;
+    border-radius: 15px;
+    border: 0.5px solid; 
+    border-color: #4d4d4d;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.skill.flip:hover {
+    transform: perspective(800px) rotateY(180deg); 
+}
+
 .skill img {
     width: 100px;
 }
