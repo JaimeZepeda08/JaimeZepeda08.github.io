@@ -195,9 +195,13 @@
                     <h3>[config.txt]</h3> 
                 </div>
                 <p>For the algorithm to work and the AI to get better, each member of the population has to be scored in some way that determines which ones are better. 
-                    The way this is done is by assigning points to each bird according to the following criteria: 
+                    The way this is done is by assigning points to each bird according to some criteria. Each member of the population hast its own neural network and its 
+                    own fitness value. This value gets updated as the generation runs. In this case, if the bird reaches either side of the screen wihout colliding with a 
+                    spike, its fitness increases by 10 points. On the other hand, if the bird collides with a spike, it loses 2 points.
                 </p>
-                
+                <p>At the end of each generation, the top individuals from each populations are picked. Their nueral networks are passed on to the next generation. Additionally,
+                    small changes, or mutations, are added so that the next population has a chance of getting better.
+                </p>
             </div>
         </div>
 
@@ -224,10 +228,6 @@
                 <li>Simuluate more realistic physics</li>
                 <li>Alter some of the values in the configuration file and see how perfomance changes</li>
             </ul>
-        </div>
-
-        <div class="section-title">
-            <h2>Analysis</h2>
         </div>
         
         <div class="section-container">
