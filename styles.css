@@ -63,6 +63,11 @@ body {
     margin-left: 15px;
 }
 
+.footer h3 a {
+    text-decoration: none;
+    color: black;
+}
+
 .section-divider {
     margin-top: 30px;
     margin-bottom: 30px;
