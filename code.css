@@ -10,10 +10,11 @@
 }
 
 .code-chunk {
+    min-width: 250px;
     padding: 15px;
     display: block;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 60%;
     height: fit-content;
     background-color: #e4e4e0;
     border: solid 2px;

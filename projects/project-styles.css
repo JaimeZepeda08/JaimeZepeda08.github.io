@@ -1,18 +1,46 @@
-.section-title {
+.section {
+    display: block;
+    margin: 30px auto;
+    width: fit-content;
+    max-width: 85%;
+    height: fit-content;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+}
+
+.section h2 {
     text-align: center;
-    padding: 10px; 
-    background-color: #f3f3f3f3;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.section-title h2 {
-    margin: 0;
+.sub-section {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
+    overflow: scroll;
 }
 
-.section-container {
-    padding: 20px; 
-    padding-left: 40px;
-    padding-right: 40px;
+.sub-section h3 {
+    text-align: center;
+}
+
+.horizontal-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    text-align: center;
+    height: fit-content;
+    margin: 10px; 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
 }
 
 a {
